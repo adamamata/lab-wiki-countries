@@ -6,7 +6,7 @@ function CountriesList({countries}) {
         <div className='countries-list'>
             {countries.map(country => {
                 return ( 
-                    <div className='container'>
+                    <div className='container' key={country.alpha3Code}>
                         <div className='row'>
                             <Link to={`/${country.alpha3Code.toLowerCase()}`}>
                                 <img src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`} alt='flag'/>
