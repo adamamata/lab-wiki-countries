@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 function CountryDetails({countries}) {
     const { countryId } = useParams();
     const country = countries.find((i) => i.alpha3Code.toLowerCase() === countryId);
-    console.log(country.name);
 
     return (
         <div className='country-details'>
@@ -15,4 +14,4 @@ function CountryDetails({countries}) {
     )
 }
 
-export default CountryDetails
+export default CountryDetails;
